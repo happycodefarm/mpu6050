@@ -1,0 +1,56 @@
+#N canvas 756 251 555 422 10;
+#X obj 119 182 hsl 128 15 -32768 32767 0 0 empty empty accel_z -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 119 129 hsl 128 15 -32768 3767 0 0 empty empty accel_y -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 119 76 hsl 128 15 -32768 32767 0 0 empty empty accel_x -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 124 -58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 269 129 hsl 128 15 -32768 32767 0 0 empty empty gyro_y -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 270 182 hsl 128 15 -32768 32767 0 0 empty empty gyro_z -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 269 76 hsl 128 15 -32768 32767 0 0 empty empty gyro_x -2 -8
+0 10 -262144 -1 -1 0 1;
+#X floatatom 116 93 6 0 0 0 - - -;
+#X floatatom 266 146 6 0 0 0 - - -;
+#X floatatom 116 146 6 0 0 0 - - -;
+#X floatatom 116 199 6 0 0 0 - - -;
+#X floatatom 266 93 6 0 0 0 - - -;
+#X floatatom 267 199 6 0 0 0 - - -;
+#X obj 47 -29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 3 -29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 3 -11 104;
+#X obj 124 6 mpu6050 104;
+#X msg 47 -11 105;
+#X obj 124 -30 metro 20;
+#X text 182 -27 refresh data every 20 ms;
+#X obj -63 -149 cnv 15 552 40 empty \$0-pddp.cnv.header mpu6050 3 12
+0 18 -204280 -1 0;
+#X text -56 -126 i2c Accelerometer and Gyroscope Pd External on Raspberry
+Pi;
+#X text 144 -60 <--- enable/disable motion reading;
+#X text 198 7 mpu6050 on i2c address 104 (0x68);
+#X text 314 -105 (cc) 2016 \, HappyCodeFarm.net;
+#X text -54 -50 change device i2c address;
+#X connect 0 0 10 0;
+#X connect 1 0 9 0;
+#X connect 2 0 7 0;
+#X connect 3 0 18 0;
+#X connect 4 0 8 0;
+#X connect 5 0 12 0;
+#X connect 6 0 11 0;
+#X connect 13 0 17 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 1 1 0;
+#X connect 16 2 0 0;
+#X connect 16 3 6 0;
+#X connect 16 4 5 0;
+#X connect 16 5 4 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 0;
