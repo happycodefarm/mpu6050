@@ -1,3 +1,8 @@
+pd-mpu5060 is a basic MPU6050 I2C Accelerometer/Gyrosope Pd External for RaspberryPi
+(cc) 2016, HappyCodeFarm, Guillaume Stagnaro. 
+http://www.happycodefarm.net
 
-This readme file should describe what this library does, where to find more
-info and get help, and any specific instructions for building it.
+Dependency : wiringPi : http://wiringpi.com
+
+To install wiringPi : sudo apt-get install wiringpi
+
