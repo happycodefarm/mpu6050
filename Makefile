@@ -1,7 +1,7 @@
 ## Pd library template version 1.0.14
 # For instructions on how to use this template, see:
 #  http://puredata.info/docs/developer/MakefileTemplate
-LIBRARY_NAME = pd-mpu6050
+LIBRARY_NAME = mpu6050
 
 # add your .c source files, one object per file, to the SOURCES
 # variable, help files will be included automatically, and for GUI
@@ -10,7 +10,7 @@ SOURCES = mpu6050.c
 
 # list all pd objects (i.e. myobject.pd) files here, and their helpfiles will
 # be included automatically
-PDOBJECTS = mpu6050.pd
+PDOBJECTS = mpu6050.pd mpu6050.pd_linux
 
 # example patches and related files, in the 'examples' subfolder
 EXAMPLES = mpu6050-example.pd
